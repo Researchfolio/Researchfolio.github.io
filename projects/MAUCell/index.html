@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MAUCell | Shreyam Gupta</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sg_final.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MAUCell</h1>
+            <h2 class="title is-1 publication-title" style="font-size:2rem;">Adaptive Multi-Attention Framework for
+              Video Frame Prediction</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://researchfolio.github.io/" target="_blank">Shreyam Gupta</a><sup>*1</sup>,</span>
+              <span class="author-block">
+                <a href="https://pranjalagg.github.io/" target="_blank">Pranjal Agrawal</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/priyam-gupta-5777b3190/" target="_blank">Priyam
+                  Gupta</a><sup>3</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Indian Institute of Technology (BHU), Varanasi, India
+                <br><sup>2</sup>University of Colorado, Boulder, USA
+                <br><sup>3</sup>Erasmus+ Mundus, Intelligent Field Robotic Systems (IFRoS), University of Girona,
+                Spain</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>shreyam.gupta.mec21@iitbhu.ac.in,
+                  u1999097@campus.udg.edu</small></span>
+              <br>
+              <br>
+              <a href="https://2025.ijcai.org/">
+                <img src="static/images/IJCAI2025_logo.png" alt="Description of the image" id="tree"
+                  style="width: 20%;">
+              </a>
+              <span class="eql-cntrb"><small><br><i>In Submission</i></small></span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2501.16997" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Researchfolio/MAUCell" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2501.16997.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          Your video here
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+  <!-- Teaser Image-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/comp_analysis.png" alt="Description of the image" id="tree" height="100%">
+        </img>
+        <br><br>
+        <h2 class="subtitle has-text-centered">
+                 <span style="font-weight:bold">Fig. 1.</span> Our Method Compared to different methods on the KTH Action dataset for reference.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser Image -->
+
+  <section class="section">
+    <div class="container" style="width: 50%">
+      <h2 class="title is-2" style="text-align: center;">Audio Overview <span style="font-size: 0.8em;">(generated using
+          <a href="https://notebooklm.google.com/">NotebookLM</a>)</span></h2>
+      <div class="columns is-centered">
+        <div class="content has-text-justified scroll-element">
+          <div class="audio-container">
+            <audio controls="">
+              <source src="static/videos/MAUCell_ Nb_audio.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Temporal sequence modeling stands as the fundamental foundation for video prediction systems and real-time
+              forecasting operations as well as anomaly detection applications. The achievement of accurate predictions
+              through efficient resource consumption remains an ongoing issue in contemporary temporal sequence
+              modeling. We introduce the Multi-Attention Unit (MAUCell) which combines Generative Adversarial Networks
+              (GANs) and spatio-temporal attention mechanisms to improve video frame prediction capabilities. Our
+              approach implements three types of attention models to capture intricate motion sequences. A dynamic
+              combination of these attention outputs allows the model to reach both advanced decision accuracy along
+              with superior quality while remaining computationally efficient. The integration of GAN elements makes
+              generated frames appear truer to life therefore the framework creates output sequences which mimic
+              real-world footage. The new design system maintains equilibrium between temporal continuity and spatial
+              accuracy to deliver reliable video prediction. Through a comprehensive evaluation methodology which merged
+              the perceptual LPIPS measurement together with classic tests MSE, MAE, SSIM and PSNR exhibited enhancing
+              capabilities than contemporary approaches based on direct benchmark tests of Moving MNIST, KTH Action, and
+              CASIA-B (Preprocessed) datasets. Our examination indicates that MAUCell shows promise for operational time
+              requirements. The research findings demonstrate how GANs work best with attention mechanisms to create
+              better applications for predicting video sequences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <center>
+        <image src="static/images/gan_architecture.png" style="width: 65%;"></image>
+      </center>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center;">GAN-based Architecture</h2>
+      <div class="column">
+        The overall framework of our proposed network follows a GAN-based architecture with a generator (G) and a
+        discriminator (D). The generator takes as input a frame \({F}_{t} \) and predicts the immediately succeeding
+        frame \({F}_{t+1} \),
+        which we denote as \( \widehat{F}_{t+1} \). This prediction is carried out by encoding the frame \({F}_{t} \)
+        through an Encoder E that
+        consists of a set of convolutional layers and fusing it with a set of previous spatial and temporal states using
+        a recurrent network to obtain a prediction about the next frame in an encoded form, and finally using a Decoder
+        D
+        to transform the predicted encoding back to the image space.<br>
+        The recurrent network used here consists of L layers of (MAUCell’s) (\( {R}^{1}, {R}^{2}, ..., {R}^{L} \)) that
+        effectively fuse the
+        spatial and temporal memory states by preserving structural as well as long-term motion information.
+        <br><br>
+        <center>
+          <image src="static/images/generator.png" style="width: 50%;"></image>
+        </center>
+        <center>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 2.</span> Overall framework of the proposed
+              generator module.</i>
+        </center>
+        <br>
+        The encoder part of the generator takes as input frame \({F_t}\) and produces an encoded spatial state of the
+        frame
+        denoted by \({S^0_t}\) at Layer-1. This spatial state is given as input to \({R^1}\), along with the previous τ
+        spatial and
+        temporal states to compute self-attention, denoted as \({S_{t−τ+1:t−1}}\) and \({T_{t−τ:t−1}}\), respectively.
+        The outputs from
+        \( {R^1} \) are matrices \( {S^1_t} \) and \( {T^1_t} \), out of which \( {T^1_t} \) is updated and appended in
+        the temporal memory to be used
+        for the next time step, i.e., while predicting \( {F_{t+2}} \) from \( {F_{t+1}} \). On the other hand, \(
+        {S^1_t} \) is used by the MAUCell
+        in the next layer \({R^2} \) and also appended to the spatial memory. The spatial and temporal states for all
+        the L
+        layers of MAUCells are computed similarly.
+      </div>
+  </section>
+
+  <!-- Ivory section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Encoder</h2>
+        </div>
+      </div>
+      <center>
+        <image src="static/images/encoder.png" style="width: 90%;"></image>
+      </center>
+      <br>
+      <center>
+        <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 3. Graphic model of the encoder unit</span>
+            displaying all the Convolution layers
+            along with their parameters used for feature extraction and frame compression. The
+            negative slope coefficient for LeakyReLU is set to 0.2.
+          </i>
+      </center>
+    </div>
+  </section>
+  <!-- ivory section -->
+
+  <!-- <h2 class="title is-3" style="text-align: center;">Encoder</h2>
+  <br>
+  <center>
+    <image src="static/images/encoder.png" style="width: 60%;"></image>
+  </center>
+  <center>
+    <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. Graphic model of the encoder unit</span>
+        displaying all the Convolution layers
+        along with their parameters used for feature extraction and frame compression. The
+        negative slope coefficient for LeakyReLU is set to 0.2.
+      </i>
+  </center>
+  <br> -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Multi-Attention Unit</h2>
+      <div class="column">
+        <center>
+          <image src="static/images/modules.png" style="width: 60%;"></image>
+        </center>
+        <center>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 4.</span> <b>(a)</b> Multi-Attention Unit
+              (MAUCell) showing the abstract
+              recurrent unit architecture. <b>(b)</b> Spatial Attention Module. <b>(c)</b>
+              Temporal Attention Module, <b>(d)</b> Hybrid Aggregation Module for combining enriched spatial and
+              temporal
+              information to produce the spatial and temporal states at the current layer for the
+              current time step. </i>
+        </center>
+        <br><br>
+
+        <span style="font-weight:bold"><u>Spatial Attention Unit</u></span> is shown in Fig. 4. (b). At a particular layer
+        l, the
+        spatial state \({S^{l−1}_t} \) from the
+        previous layer is input to this unit within the MAUCell \({R^l} \) along with a spatial state from the previous
+        time
+        step denoted by \({S^{l−1}_{t−1}} \). At each time step, the squared Euclidean distance between the current and
+        previous
+        spatial states is computed which is further passed through sigmoidal activation (σ) to generate a spatial
+        attention map \({S_{AM}} \) as follows:<br>
+        $${S}_{AM} = σ(||S^{l−1}_{t} – S^{l−1}_{t−1} ||^2_2 ).$$
+        \(S_{AM}\) is next aggregated with the previous spatial state \({S^{l−1}_{t−1}} \) and current spatial state
+        \({S^{l−1}_t} \) using a
+        spatial fusion gate \(S_{sf}\) to obtain a superior spatial state representation S’, as explained using the
+        following
+        expression:
+        $$S’ = U_{sf} \odot S^{l−1}_t + (1−U_{sf}) \odot S_{AM} \odot S^{l−1}_{t−1}$$
+        Here, \({U_{sf}} \) = σ( \(\widehat{S^{l−1}_t}\)), \({ \widehat{S^{l−1}_t}} = W_{sf}*S^{l−1}_t, W_{sf} \) being
+        the weights of the convolutional
+        kernel. The proposed spatial attention unit mainly focuses on specific parts of the frame that contain
+        high-motion information. It also helps preserve smaller moving entities in the frame from fading away and
+        maintains pixel consistency while concentrating on intrinsic intra-frame motion correlations.
+        <br><br>
+
+        <span style="font-weight:bold"><u>Temporal Attention Unit</u></span> The initial spatial state that is output
+        from the encoder is input to this temporal attention module (TAM). The module has three more inputs which are
+        ini tially zero matrices but are updated along the pipeline flow. These inputs are the temporal state from the
+        previous time step and a limited set of previous τ spatial and temporal states used for computing self-attention
+        as observed in Fig. 4. (c). These states are updated and controlled by the gating mechanisms. The module solves
+        one of the most challenging tasks of broadening the tempo ral receptive field without increasing the kernel size
+        for long-term information preservation and prediction.
+        Let the set of previous temporal states from time step t−τ to t−1 for layer l be denoted by \({T^l_{t−τ:t−1}}
+        \).
+        Further, let us use τ to refer to the number of past temporal states, ∗ and \({\odot} \) to denote the
+        convolution and
+        Hadamard operator respectively, and \({T_{AI}} \) to denote the attention information for long-term temporal
+        information.
+        Then, \({T_{AI}} \) is computed as: \({{T_{AI}} = \sum_{i=1}^τ α_iT^l_{t−i}} \), where, \({α_i}\) is the
+        attention score for the temporal
+        state \({T_{i}} \) and is computed as \({α_i = \phi( \sum_{j=1}^τ S^{l−1}_{t−j+1} \odot \widehat{S^{l−1}_t})}\).
+        Here, \({\phi} \)
+        denotes the softmax function and \({\widehat{S^{l−1}_t} = W_s*S^{l−1}_t} \). \({T_{AI}} \) is accumulated with
+        the preceding
+        temporal state using a temporal fusion gate \({U_{tf}} \) to obtain a superior temporal state T, given by:
+        $$T’ = U_tf \odot T^l_{t−1} + (1 – U_tf) T_AI, \; where \; U_tf = σ(W_tf∗T^l_{t−1}).$$
+        <br><br>
+
+        <span style="font-weight:bold"><u>Hybrid Aggregation Module</u></span> This module effectively fuses the
+        enhanced spatial
+        and temporal states, namely S' and T' obtained. Unlike the existing method
+        which only fuses the motion information from the aggregated temporal state
+        and the appearance information from the spatial state, we employ an improved
+        aggregation technique to fuse general appearance, motion information as well as
+        spatial structural changes to preserve better information related to the motion
+        of every moving entity in the frame with different levels of attention. The final
+        spatial output from this module has a high level of spatial information that the
+        discriminator network may effectively utilize to produce a much sharper output.<br><br>
+        The estimations (Refer the paper) are merged with the corresponding outputs from aggregation
+        1 using an adaptive function with learnable parameters to finally generate the
+        spatial and temporal state for the current layer and time step:
+        $$T^l_t = W_t \odot \tilde{T} + (1−W_t) \odot T_e, \; and\; S^l_t = W_s \odot \tilde{S} +(1−W_s)\odot S_e .$$
+      </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Experiments</h2>
+      <div class="column">
+        <center>
+          <image src="static/images/MNIST_graph.png" style="width: 60%;"></image>
+        </center>
+        <br>
+        <center>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 5.</span> Frame-wise metric plot for
+              different metrics for per frame metric comparison
+              for different methods on the Moving MNIST dataset. </i>
+        </center><br>
+        The proposed model outperforms all the previous
+        models in all metric scores. The good performance is due to the
+        high-quality spatiotemporal information extraction of earlier frames and effective fusion with the enhanced spatial state (appearance). The response time of
+        our method is also the least among all the compared approaches, which verifies
+        its computational effectiveness over the others.<br><br>
+        As observed from the plots, the metric scores worsen for
+        longer predictions for each model. However, the worsening trend seems to be the
+        least for the proposed model. This is due to the effective attention mechanisms where only the most
+        relevant information is retained from the past frames during the prediction.
+        <br><br>
+        <br>
+        <center>
+          <image src="static/images/fig_casia.png" style="width: 80%;"></image>
+        </center>
+        <!-- <br> -->
+        <center>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 6.</span> Visual comparison of generated frames of the CASIA-B dataset. </i>
+        </center><br>
+        Fig. 1, 6. shows a visual comparison of different frame prediction models using the
+        KTH Action and CASIA-B data. As observed from the image, the predictions of the proposed
+        approach are not only in near-perfect synchronization with ground truth frames
+        but also have maintained the perceptual quality. 
+        <br><br>
+        Due to the effective utilization of the learned temporal
+        dynamics, the proposed model can learn much faster and retain correct motion
+        information for longer predictions. Further, the enhanced quality of the generated
+        frames is due to the incorporation of spatial attention for pixel consistency and
+        dynamic adversarial loss. 
+      </div>
+  </section>
+
+
+
+
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            Your image here
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              First image description.
+            </h2>
+          </div>
+          <div class="item">
+            Your image here
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Second image description.
+            </h2>
+          </div>
+          <div class="item">
+            Your image here
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Third image description.
+            </h2>
+          </div>
+          <div class="item">
+            Your image here
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Fourth image description.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End image carousel -->
+
+
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        Paper video.
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              Youtube embed code here
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              Your video file here
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              Your video file here
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              Your video file here
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{gupta2025maucelladaptivemultiattentionframework,
+        title={MAUCell: An Adaptive Multi-Attention Framework for Video Frame Prediction}, 
+        author={Shreyam Gupta and P. Agrawal and Priyam Gupta},
+        year={2025},
+        eprint={2501.16997},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2501.16997}, 
+  }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PT-STAFU | Shreyam Gupta</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sg_final.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PT-STAFU</h1>
+            <h2 class="title is-1 publication-title" style="font-size:2rem;">Physically-guided Temporal Spatio-Temporal
+              Attentive Fusion Unit</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://researchfolio.github.io/" target="_blank">Shreyam Gupta</a>,</span>
+              <span class="author-block">
+                <a href="https://www.iitbhu.ac.in/dept/cse/people/indracse" target="_blank">Indra D Mastan</a>,
+                and</span>
+              <span class="author-block">
+                <a href="https://iitbhu.ac.in/dept/mec/people/jsarkarmec" target="_blank">Jahar Sarkar<sup>*<sup></a>
+              </span>
+              <br>
+              <br>
+              <a href="https://iccv.thecvf.com/">
+                <img src="static/images/ICCV-logo.svg" alt="Description of the image" id="tree" style="width: 12%;">
+              </a>
+              <span class="eql-cntrb"><small><br><i>In Submission</i></small></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Indian Institute of Technology (BHU), Varanasi, India
+              </span>
+              <span class="eql-cntrb"><small><br>{shreyam.gupta.mec21, indra.cse, jsarkar.mec}@iitbhu.ac.in
+                </small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          Your video here
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+  <!-- Teaser Image-->
+  <section class="hero teaser">
+    <div class="container">
+      <div class="hero-body">
+        <img src="static/images/petit_input.png" alt="Description of the image" id="tree" width="100%">
+        </img>
+        <!-- <br><br> -->
+        <img src="static/images/petit_gen.png" alt="Description of the image" id="tree" height="100%">
+        </img>
+        <!-- <br><br> -->
+        <h2 class="subtitle has-text-centered">
+                 <span style="font-weight:bold">Fig. 1.</span> Visual comparison of generated frames of the PETIT-GAN
+          dataset.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser Image -->
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Thermal video analysis faces significant challenges in translating time-series data across modalities
+              while preserving physical accuracy and temporal consistency. Existing approaches often neglect the
+              integration of thermodynamic principles or fail to maintain structural coherence in dynamic thermal
+              patterns. This paper presents PT-STAFU (Physically-guided Temporal Spatio-Temporal Attentive Fusion Unit),
+              a novel framework that synergizes physics-informed modeling with attention-driven spatio-temporal learning
+              for thermal video translation. PT-STAFU enhances the Spatio-Temporal Attentive Fusion architecture by
+              embedding a temporal physical estimator derived from heat transfer equations and black-body radiation
+              principles, enabling joint modeling of spatial appearance and thermodynamic evolution. The framework
+              integrates a dual-attention mechanism-comprising physics-aware spatial attention and motion-guided
+              temporal attention-within a GAN-based structure, augmented with hybrid aggregation modules for coherent
+              feature fusion. A composite loss function combining adversarial, physical consistency, and temporal
+              smoothness constraints ensures fidelity to both target modalities and thermodynamic laws. Case studies in
+              wildfire prediction demonstrate its capability to detect pre-ignition thermal anomalies (ΔT > 4.2°C) with
+              high accuracy, outperforming conventional frame-by-frame approaches. By enabling cross-modal thermal video
+              synthesis with <2.1% temporal distortion, this work advances applications in climate monitoring, precision
+                agriculture, and disaster management, establishing a new paradigm for physics-guided spatio-temporal
+                learning in computational imaging. <br><br>
+                <b>Keywords: </b>Thermal video translation, spatio-temporal attention, physics-guided GANs,
+                thermodynamic modeling, wildfire prediction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2" style="text-align: center;">Proposed Framework</h2>
+      <div class="column">
+        <!-- <b>PT-STAFU (Physically-guided Temporal Spatio-Temporal Attentive Fusion Unit)</b> is a deep learning framework for
+        time-series thermal video translation across sensor modalities. It integrates PETIT-GAN's physics-based thermal
+        modeling with STAFU's spatio-temporal attention mechanisms to enable accurate, physically consistent
+        translations of thermal video sequences.<br><br>
+        Key components include:<br><br>
+        <b>1. Physics-enhanced temporal modeling:</b> Extends PETIT-GAN's black-body radiation equations to model temporal
+        thermal dynamics using heat transfer principles, enabling predictions of temperature evolution over time.<br>
+        <b>2. Physically-guided attention:</b> Combines Spatio-Temporal Attentive Fusion Unit’s spatial and temporal attention
+        units with thermal material properties and motion patterns, prioritizing regions of significant heat flow for
+        structural consistency.<br>
+        <b>3. Hybrid training strategy:</b> Employs adversarial, physical consistency, and temporal smoothness losses within a
+        GAN architecture to balance perceptual quality with thermodynamic accuracy.<br><br>
+        The framework achieves a significant improvement in FID over baseline models and detects pre-ignition thermal
+        anomalies (ΔT > 4.2°C) with high accuracy, making it particularly effective for wildfire prediction, climate
+        monitoring, and precision agriculture applications.<br>
+        By standardizing thermal data across heterogeneous sensors (e.g., panchromatic to 9µm monochromatic), PT-STAFU
+        enables unified analysis of multi-source thermal video streams while maintaining <2.1% temporal distortion. <br>
+          <br> -->
+        We propose PT-STAFU, a novel neural architecture that extends STAFU's spatio-temporal attention mechanisms with
+        physics-based guidance from PETIT-GAN's approach. The framework consists of several key components designed to
+        address the unique challenges of thermal time-series translation.<br><br>
+        <b>Physics-Enhanced Temporal Modeling</b><br><br>
+        The cornerstone of our approach is extending PETIT-GAN's physical estimator to incorporate temporal
+        dynamics.
+        While PETIT-GAN models the relationship between panchromatic and monochromatic intensities based on
+        black-body
+        radiation physics for single images, our approach will incorporate heat transfer equations to model how
+        thermal
+        patterns evolve over time.<br><br>
+        Physical estimator including temporal components models intensity as:
+        $$I_t(T_{obj_t}, T_{int_t}) = f(T_{obj_{t-1}}, T_{obj_{t-2}}, ...,
+        T_{obj_{t-n}},\text{environmental_factors}_t)$$
+        This temporal physical estimator will provide a physics-based prior for how thermal patterns should evolve,
+        serving as a foundation for more accurate translations.<br><br>
+
+        <b>Physics-Guided Spatio-Temporal Attention</b><br><br>
+
+        Building on STAFU's attention mechanisms, we developed physically-guided attention units that incorporate
+        thermal physics:<br><br>
+        <b>1. Enhanced Temporal Attention Module:</b> This module is modified to focus on thermally-relevant motion
+        patterns,
+        with attention weights influenced by predicted heat flow patterns. This enables the model to better capture how
+        thermal information propagates over time in physically plausible ways.<br>
+        <b>2. Physics-Aware Spatial Attention:</b> The spatial attention module is enhanced to account for thermal
+        material
+        properties and spatial heat distribution. This helps the model focus on areas where significant thermal changes
+        are physically expected.<br>
+        <b>3. Thermal Hybrid Aggregation:</b> The hybrid aggregation module from Spatio-Temporal Attentive Fusion Unit
+        is
+        adapted to prioritize physically plausible combinations of spatial and temporal features, ensuring that the
+        fused information respects thermal physics principles.
+      </div>
+  </section>
+
+  <!-- Ivory section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Network Architecture</h2>
+        </div>
+      </div>
+      The overall architecture integrates these components in a GAN-based framework:
+
+      <pre><code>Input: Sequence of frames in source thermal modality
+Output: Sequence of frames in target thermal modality
+
+Processing pipeline:
+1. Frame-level encoding
+2. Physics-based temporal estimation
+3. Physically-guided spatio-temporal attention processing
+4. GAN-based translation with physical constraints
+5. Temporal consistency enforcement
+6. Frame-level decoding</code></pre>
+
+
+      Skip connections between the encoder and decoder will preserve fine structural details, while the
+      physically-guided attention mechanisms will ensure temporal consistency and physical plausibility.
+      <!-- <center>
+        <image src="static/images/encoder.png" style="width: 90%;"></image>
+      </center>
+      <br>
+      <center>
+        <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 3. Graphic model of the encoder unit</span>
+            displaying all the Convolution layers
+            along with their parameters used for feature extraction and frame compression. The
+            negative slope coefficient for LeakyReLU is set to 0.2.
+          </i>
+      </center> -->
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Black Box Model Extraction | Shreyam Gupta</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sg_final.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Black Box Model Extraction</h1>
+            <h2 class="title is-1 publication-title" style="font-size:2rem;">for Video Classification</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <a href="https://2025.ijcai.org/">
+                <img src="static/images/bosch_logo.svg" alt="Description of the image" id="tree" style="width: 20%;">
+              </a>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2501.16997" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Researchfolio/Model_Extraction_Attack_Video_Classification"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="static/pdfs/InterIIT_Bosch_Slides.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="fa-solid fa-file-powerpoint"></i> -->
+                      <i class="fas fa-file-powerpoint"></i>
+                    </span>
+                    <span>Slides</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser Image-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <center>
+          <!-- <image src="static/images/gan_architecture.png" style="width: 65%;"></image> -->
+          <img src="static/images/modelextraction.jpg" alt="Description of the image" id="tree" style="width:100%;">
+          </img>
+        </center>
+        <!-- <br><br> -->
+        <h2 class="subtitle has-text-centered">
+          <span style="font-weight:bold">Fig. 1.</span> Samples from Kinetics 600 dataset.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser Image -->
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          Please go through the slides linked above or watch through our presentation below.
+        </h2>
+        <centre>
+          <iframe src="https://drive.google.com/file/d/1l75HNPUfXPEQmIOUbBsiiD6kHIoHM8gi/preview?t=2823&amp;end=3080"
+            width="720" height="405"></iframe>
+          <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+          <!-- Your video here -->
+          <!-- <source src="static/videos/TRO_Final.mp4" type="video/mp4">
+        </video> -->
+        </centre>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">End-To-End Approach</h2>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <center>
+      <image src="static/images/end_to_end.png" style="width: 65%;"></image>
+    </center>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="section">
+    <div class="container">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-2" style="text-align: center;">Installation</h2>
+        <pre><code class="language-bash">$ pip install vidmodex  ## Stable version
+$ pip install git+https://github.com/Researchfolio/Model_Extraction_Attack_Video_Classification  ## Latest development</code></pre>
+      </div>
+
+      <h2 class="title is-2" style="text-align: center;">Usage</h2>
+      <br>
+      <h2 class="subtitle has-text-centered">
+        Simple snippet explaining the usage :
+      </h2>
+      <br>
+      <h2 class="title is-2" style="text-align: center;">BlackBox Extraction</h2>
+      <div class="container is-max-desktop content">
+        <pre><code class="language-bash"># Black Box Victim: SwinT, Student: ViViT, Generator: Tgan
+
+from vidmodex.models import ViViT as Student
+from vidmodex.models import SwinT as Victim
+from vidmodex.generator import Tgan as Generator
+        
+custom_config = {}
+custom_config["num_classes"] = 400
+
+blackbox_main(custom_config)</code></pre>
+      </div>
+
+      <h2 class="title is-2" style="text-align: center;">GreyBox Extraction</h2>
+      <div class="container is-max-desktop content">
+        <pre><code class="language-bash"># Grey Box Victim: SwinT, Student: ViViT, Generator: Tgan, Dataset: Kinetics 400
+
+from vidmodex.models import ViViT as Student
+from vidmodex.models import SwinT as Victim
+from vidmodex.generator import Tgan as Generator
+
+custom_config = {}
+custom_config["csv_file"] = "ENTER-THE-LOCATION-OF-DATA-CSV"
+custom_config["root_dir"] = "ENTER-THE-LOCATION-OF-DATA-ROOT"
+custom_config["ucf_gan_weights"] = "ENTER-THE-LOCATION-OF-UCF-WEIGHTS" or "state_normal81000.ckpt"
+custom_config["num_classes"] = 400
+
+greybox_main(custom_config)</code></pre>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

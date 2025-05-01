@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>UAV-UGV Nav | Shreyam Gupta</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sg_final.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Drone-Assisted UAV-UGV Collaboration </h1>
+            <h2 class="title is-1 publication-title" style="font-size:2rem;">for Autonomous Navigation in Snow-Covered
+              Terrain</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://researchfolio.github.io/" target="_blank">Shreyam Gupta</a><sup>*1</sup>,</span>
+              <span class="author-block">
+                <a href="https://pranjalagg.github.io/" target="_blank">Pranjal Agrawal</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/priyam-gupta-5777b3190/" target="_blank">Priyam
+                  Gupta</a><sup>3</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Indian Institute of Technology (BHU), Varanasi, India
+                <br><sup>2</sup>University of Colorado, Boulder, USA
+                <br><sup>3</sup>Erasmus+ Mundus, Intelligent Field Robotic Systems (IFRoS), University of Girona,
+                Spain</span>
+              <br>
+              <br>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://hal.science/hal-04863346/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/shreyamG/Drone-Assisted-UAV-UGV-Collaboration-for-Autonomous-Navigation"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Slides -->
+                <span class="link-block">
+                  <a href="https://docs.google.com/presentation/d/1OxAV2fgq0vwrDc3KvTszAuGlWi2Jsd1YM7KETbr-Jc0/edit?usp=sharing"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="fa-solid fa-file-powerpoint"></i> -->
+                      <i class="fas fa-file-powerpoint"></i>
+                    </span>
+                    <span>Slides</span>
+                  </a>
+                </span>
+
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/UAV_UGV_Nav_Report.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Report</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser Image-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/overview.png" alt="Description of the image" id="tree" height="100%">
+        </img>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser Image -->
+
+  <section class="section">
+    <div class="container" style="width: 50%">
+      <h2 class="title is-2" style="text-align: center;">Audio Overview <span style="font-size: 0.8em;">(generated using
+          <a href="https://notebooklm.google.com/">NotebookLM</a>)</span></h2>
+      <div class="columns is-centered">
+        <div class="content has-text-justified scroll-element">
+          <div class="audio-container">
+            <audio controls="">
+              <source src="static/videos/UAV Guided UGV Navigation.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="column">
+        In the problem statement, we were asked to use a UAV to explore and
+        map a mountainous terrain during summer time. After mapping, the UAV must be used to guide a UGV to traverse
+        through
+        the
+        terrain during the winter time when roads are covered with snow.<br>
+        <br>Key points from the PS<br>
+        • The UAV has an IMU, a GPS and a RGBD camera as sensors.<br>
+        • The UGV has no sensor.<br>
+        • The mapping needs to be completed in the textured world while
+        the UGV navigates in the untextured world.
+      </div>
+  </section>
+
+
+  <!-- New section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Approach</h2>
+      <div class="column">
+
+        The project is divided into three parts:<br><br>
+        • <b>Mapping</b>: We segmented roads based in UAV Camera feed using U-Net, and used frontier exploration to map
+        the entire terrain.<br>
+        • <b>UAV Localization and Control</b>: We used Ardupilot coupled with our own control and planning algorithms
+        for UAV control. The UAV localization was done by filtering and combining the GPS and IMU data.<br>
+        • <b> UGV Localization and Control</b>: For localization of UGV, we used Yolov5 on the UAV camera feed and
+        localized it relative to the UAV. We used the <i>Se2_Navigation</i> and <i>Navfn</i> RIS packages for path
+        planning and UGV control.
+
+        <br>
+      </div>
+  </section>
+
+  <!-- New section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">UAV Localization</h2>
+      <div class="column">
+
+        In the problem
+        statement, we were provided with GPS and IMU sensors on the UAV. We fused the incoming data from these sensors
+        using
+        <b>Extended Kalman Filter </b>to produce our desired odometry.
+        The node <i>ekf_localization</i> in <a
+          href="https://wiki.ros.org/robot_localization"><i>robot_localization</i></a>
+        ROS package provided us with the 15D odometry. Maximum observed error after multiple-goal points turned out to
+        be ±0.5
+        meters in all three axes.
+        <br><br>
+
+        <table align=center width=1000px>
+          <tr>
+            <!-- <center> -->
+            <a href=''><img class="round" align="left" style="width: 45%;" src="static/images/uav_loc.png" /></a>
+            <!-- <figcaption><i>Complete Pipeline of our solution</i></figcaption> -->
+
+            <a href=''><img class="round" align="right" style="width: 45%;" src="static/images/uav_loc.gif" /></a>
+            <!-- <figcaption><i>Complete Pipeline of our solution</i></figcaption> -->
+            <!-- </center> -->
+          </tr>
+        </table>
+
+        <br>
+      </div>
+  </section>
+
+  <!-- New section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Terrain Mapping</h2>
+      <div class="column">
+
+        <table align=center width=1000px>
+          <tr>
+            <center>
+              <a href=''><img class="round" style="width: 70%;" src="static/images/mapping_flow.png" /></a>
+              <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+            </center>
+          </tr>
+        </table>
+        <br>
+
+        <h2 class ="title is-3"><b><u>Road Segmentation</u></b></h2>
+        We prepared a dataset containing simulated environment images and manually annotated them using <a
+          href="https://www.cvat.ai/">CVAT</a>. Then we fit a <b>UNET</b> to segment the roads in those images. For
+        better
+        training, we used standard augmentation techniques and obtained ~96% accuracy on testing data. More details can
+        be
+        found in our <a
+          href="https://github.com/shreyamG/Drone-Assisted-UAV-UGV-Collaboration-for-Autonomous-Navigation/blob/master/UAV_UGV_Nav_Report.pdf">report</a>.
+        <br><br>
+        <table align=center width=1000px>
+          <tr>
+            <center>
+              <a href=''><img class="round" style="width: 70%;" src="static/images/unet_results.png" /></a>
+              <figcaption><i>UNET Segmentation Results</i></figcaption>
+            </center>
+          </tr>
+        </table>
+        <br>
+
+        <table align=center width=1000px>
+          <tr>
+            <center>
+              <a href=''><img class="round" style="width: 50%;" src="static/images/mapping_block.png" /></a>
+              <figcaption><i>Exploration Pipeline</i></figcaption>
+            </center>
+          </tr>
+        </table>
+        <br><br>
+        The mapping performed by the UAV has been implemented using
+        the <a href="http://wiki.ros.org/rtabmap_ros">RTABMAP</a> ROS package. The package uses RGB-D SLAM approach
+        and create a 2D Occupancy grid map using the 3D
+        pointcloud values obtained by RGBD camera atop the drone.<br><br>
+        The package takes in the values from the camera as well as the
+        odometry, and publishes the projected 2D map of the 3D environment.
+        <br><br>
+        Next, we implemented the Frontier Exploration approach using the
+        <a href="http://wiki.ros.org/explore_lite">Frontier_Exploration</a> ROS package in order to explore the world
+        terrain.
+        Frontiers are regions on the boundary between open space and
+        unexplored space. By moving to a new frontier, we can keep building
+        the map of the environment, until there are no new frontiers left to
+        detect.
+
+        <br><br>
+
+        <table align=center width=1000px>
+          <tr>
+            <!-- <center> -->
+            <a href=''><img class="round" align="left" style="width: 45%;" src="static/images/rtabmap.jpg" /></a>
+            <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+            <!-- </center> -->
+          </tr>
+
+          <tr>
+            <!-- <center> -->
+            <a href=''><img class="round" align="right" style="width: 40%;" src="static/images/frontier.gif" /></a>
+            <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+            <!-- </center> -->
+          </tr>
+        </table>
+
+      </div>
+  </section>
+
+    <!-- New section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-3" style="text-align: center;">UGV Navigation</h2>
+        <div class="column">
+  
+          <table align=center width=1000px>
+            <tr>
+              <center>
+                <a href=''><img class="round" style="width: 70%;" src="static/images/nav_flow.png" /></a>
+              </center>
+            </tr>
+            <!-- We then iterate using weighted center algorithm for calculating the desired voronoi cells and the positions of each agent. -->
+          </table>
+        <br><br>
+          <h2 class="title is is-3"><b><u>UGV Detection and Tracking</u></b></h2>
+        
+          <table align=center width=1000px>
+            <tr>
+              <center>
+                <a href=''><img class="round" style="width: 60%;" src="static/images/ugv_detect_flow.png" /></a>
+                <figcaption><i>Detection and Tracking Pipeline</i></figcaption>
+              </center>
+            </tr>
+          </table>
+          <br><br>
+          <table align=center width=1000px>
+            <tr>
+              <!-- <center> -->
+              <a href=''><img class="round" align="left" style="width: 45%;" src="static/images/ugv_detect.png" /></a>
+              <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+              <!-- </center> -->
+        
+              <!-- <center> -->
+              <a href=''><img class="round" align="right" style="width: 45%;" src="static/images/ugv_track.gif" /></a>
+              <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+              <!-- </center> -->
+            </tr>
+          </table>
+          <br><br>
+          <h2 class="title is is-3"><b><u>UGV Controls</u></b></h2>
+        
+          For UGV control Pure Pursuit Controller was used which is a path tracking algorithm.It computes the angular velocity
+          command that moves the robot from its current position to reach some look-ahead point in front of the robot.
+          <br><br>
+          <table align=center width=1000px>
+            <tr>
+              <!-- <center> -->
+              <a href=''><img class="round" align="left" style="width: 40%;" src="static/images/ugv_control_block.png" /></a>
+              <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+              <!-- </center> -->
+        
+              <!-- <center> -->
+              <a href=''><img class="round" align="right" style="width: 40%;" src="static/images/ugv_control.png" /></a>
+              <!-- <figcaption><i>Comparision of exploration time with different number of bots</i></figcaption> -->
+              <!-- </center> -->
+            </tr>
+          </table>
+          <br><br>
+          <h2 class="title is is-3"><b><u>UGV Planning</u></b></h2>
+        
+          <a href=''><img class="round" align="right" style="width: 300;" src="static/images/ugv_planning.png" /></a>
+        
+          <ul>
+            <li><b>Local Planner-OMPL(Open Motion Planning Library)</b> is a collection of state-of-the-art sampling-based
+              motion planning algorithms.</li><br>
+            <li><b>Global Planner-TEB (Timed Elastic Band)</b> locally optimizes the robot's trajectory with respect to
+              trajectory execution time, separation from obstacles and compliance with kinodynamic constraints at runtime.</li>
+          </ul>
+          <br><br>
+          We used <a href="https://github.com/leggedrobotics/se2_navigation">se2_navigation</a> ROS package
+          which subscribes to the odometry topic of car with respect
+          to a suitable odom frame to receive car's odometry w.r.t initial starting position
+          and orientation of the drone.<br><br>
+          Now when we publish a suitable goal point in the same odom frame, the
+          <i>se2 OMPL planner</i> inside this package plans a proper trajectory for the
+          car to follow which is a sequential array of poses in the odometry frame.
+        </div>
+    </section>
+    
+
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@unpublished{gupta:hal-04863346,
+        TITLE = {{Drone-Assisted UAV-UGV Collaboration for Autonomous Navigation in Snow-Covered Terrain}},
+        AUTHOR = {Gupta, Shreyam and Agrawal, P. and Gupta, Priyam},
+        URL = {https://hal.science/hal-04863346},
+        NOTE = {working paper or preprint},
+        YEAR = {2025},
+        MONTH = Jan,
+        PDF = {https://hal.science/hal-04863346v1/file/Drone-Assisted_UAV-UGV.pdf},
+        HAL_ID = {hal-04863346},
+        HAL_VERSION = {v1},
+      }</code></pre>
+    </div>
+  </section> -->
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
