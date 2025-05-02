@@ -161,6 +161,11 @@ textarea {
 }
 
 /* Basic */
+a#clustrmaps-widget-v2, #clustrmaps-widget-v2 {
+  pointer-events: none;
+}
+
+
 @-ms-viewport {
   width: device-width;
 }
