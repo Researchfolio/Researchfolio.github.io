@@ -2,10 +2,10 @@
 <html>
 
 <head>
-  
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
+
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
@@ -47,16 +47,16 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
-  
-  <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Z8Z3X0W8"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
 
-		gtag('config', 'G-Y9Z8Z3X0W8');
-	</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Z8Z3X0W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9Z8Z3X0W8');
+  </script>
 </head>
 
 <body>
@@ -120,7 +120,7 @@
                     <span>Code</span>
                   </a>
                 </span>
-                
+
                 <!-- Slides -->
                 <span class="link-block">
                   <a href="https://docs.google.com/presentation/d/1TU3QcEYxcty1VoTaFJ9mb3mWrBkc-Mv3/edit?usp=sharing&ouid=105444939063072047919&rtpof=true&sd=true"
@@ -188,7 +188,8 @@
         </img>
         <br><br>
         <h2 class="subtitle has-text-centered">
-                 <span style="font-weight:bold">Fig. 1.</span> Our Method Compared to different methods on the KTH Action dataset for reference.
+                 <span style="font-weight:bold">Fig. 1.</span> Our Method Compared to different methods on the KTH
+          Action dataset for reference.
         </h2>
       </div>
     </div>
@@ -219,22 +220,24 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Temporal sequence modeling stands as the fundamental foundation for video prediction systems and real-time
-              forecasting operations as well as anomaly detection applications. The achievement of accurate predictions
-              through efficient resource consumption remains an ongoing issue in contemporary temporal sequence
-              modeling. We introduce the Multi-Attention Unit (MAUCell) which combines Generative Adversarial Networks
-              (GANs) and spatio-temporal attention mechanisms to improve video frame prediction capabilities. Our
-              approach implements three types of attention models to capture intricate motion sequences. A dynamic
-              combination of these attention outputs allows the model to reach both advanced decision accuracy along
-              with superior quality while remaining computationally efficient. The integration of GAN elements makes
-              generated frames appear truer to life therefore the framework creates output sequences which mimic
-              real-world footage. The new design system maintains equilibrium between temporal continuity and spatial
-              accuracy to deliver reliable video prediction. Through a comprehensive evaluation methodology which merged
-              the perceptual LPIPS measurement together with classic tests MSE, MAE, SSIM and PSNR exhibited enhancing
-              capabilities than contemporary approaches based on direct benchmark tests of Moving MNIST, KTH Action, and
-              CASIA-B (Preprocessed) datasets. Our examination indicates that MAUCell shows promise for operational time
-              requirements. The research findings demonstrate how GANs work best with attention mechanisms to create
-              better applications for predicting video sequences.
+              In recent years, Recurrent Neural Networks (RNNs) have
+              been extensively used for video frame prediction. The use of attention
+              in recurrent networks helps in better memory utilization and to date,
+              only a few recent video frame prediction models have used attention to
+              capture long-term motion information. Still, these methods fail to preserve the structural consistency
+              resulting in blurry output and fading
+              out of smaller objects. We propose a new RNN-based spatio-temporal
+              prediction unit with attention termed Multi-Attention Unit (MAUCell) that combines temporal motion information and spatial
+              appearance information respectively through a temporal attention unit
+              and a spatial attention unit to preserve long-term sequence information at high resolution. The outputs
+              from the two attention units are
+              next aggregated through a hybrid aggregation unit with a wide receptive field for both the spatial and
+              temporal features, which causes high quality video prediction. The above units are embedded within a GAN
+              framework that is trained in an end-to-end fashion. Our approach has
+              been evaluated on three public datasets, namely Moving-MNIST, KTH-Action, and CASIA-B, and interesting results
+              have been obtained. A comparative study with other recent models shows that, on average, our
+              model performs better and more consistently than the others in terms of
+              the different metrics, namely MSE, MAE, SSIM, PSNR, and LPIPS.
             </p>
           </div>
         </div>
@@ -268,7 +271,8 @@
           <image src="static/images/generator.png" style="width: 50%;"></image>
         </center>
         <center>
-          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 2.</span> Overall framework of the proposed
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 2.</span> Overall framework of the
+              proposed
               generator module.</i>
         </center>
         <br>
@@ -342,7 +346,8 @@
         </center>
         <br><br>
 
-        <span style="font-weight:bold"><u>Spatial Attention Unit</u></span> is shown in Fig. 4. (b). At a particular layer
+        <span style="font-weight:bold"><u>Spatial Attention Unit</u></span> is shown in Fig. 4. (b). At a particular
+        layer
         l, the
         spatial state \({S^{l−1}_t} \) from the
         previous layer is input to this unit within the MAUCell \({R^l} \) along with a spatial state from the previous
@@ -419,7 +424,8 @@
         </center><br>
         The proposed model outperforms all the previous
         models in all metric scores. The good performance is due to the
-        high-quality spatiotemporal information extraction of earlier frames and effective fusion with the enhanced spatial state (appearance). The response time of
+        high-quality spatiotemporal information extraction of earlier frames and effective fusion with the enhanced
+        spatial state (appearance). The response time of
         our method is also the least among all the compared approaches, which verifies
         its computational effectiveness over the others.<br><br>
         As observed from the plots, the metric scores worsen for
@@ -433,18 +439,19 @@
         </center>
         <!-- <br> -->
         <center>
-          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 6.</span> Visual comparison of generated frames of the CASIA-B dataset. </i>
+          <span style="font-size:14px"><i> <span style="font-weight:bold">Fig. 6.</span> Visual comparison of generated
+              frames of the CASIA-B dataset. </i>
         </center><br>
         Fig. 1, 6. shows a visual comparison of different frame prediction models using the
         KTH Action and CASIA-B data. As observed from the image, the predictions of the proposed
         approach are not only in near-perfect synchronization with ground truth frames
-        but also have maintained the perceptual quality. 
+        but also have maintained the perceptual quality.
         <br><br>
         Due to the effective utilization of the learned temporal
         dynamics, the proposed model can learn much faster and retain correct motion
         information for longer predictions. Further, the enhanced quality of the generated
         frames is due to the incorporation of spatial attention for pixel consistency and
-        dynamic adversarial loss. 
+        dynamic adversarial loss.
       </div>
   </section>
 
