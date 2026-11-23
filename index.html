@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html data-theme="dark">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Z8Z3X0W8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-Y9Z8Z3X0W8');
+	</script>
+
+	<title>Shreyam Gupta</title>
+	<link rel="icon" type="image/x-icon" href="images/sg_final.jpg">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Fixed Header Navigation (Moved outside #wrapper) -->
+    <header id="fixed-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand"><strong>Shreyam</strong> Gupta</a>
+            
+            <button class="nav-toggler" id="nav-toggle-btn" type="button" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <nav class="nav-collapse" id="nav-collapse">
+                <ul class="nav-list">
+                    <li><a href="#publications">preprints</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#banner">about</a></li>
+                    <!-- <li><a href="#cv">CV</a></li> -->
+					
+					<li class="toggle-container">
+						<button id="light-toggle" title="Change theme" type="button">
+							<i class="icon solid fa-moon" id="light-toggle-dark"></i>
+							<i class="icon solid fa-sun" id="light-toggle-light"></i>
+						</button>
+					</li>
+					
+                </ul>
+            </nav>
+        </div>
+        <progress id="progress" value="0" max="100"></progress>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Banner -->
+                <section id="banner">
+                    <div class="content">
+                        <header>
+                            <h1><strong>Hi, I'm Shreyam</strong></h1>
+						</header>
+							
+						<div class="profile float-right">
+							<figure class="profile-photo">
+								<img src="images/image.jpg" alt="Shreyam Gupta">
+							</figure>
+							<div class="profile-socials">
+								<a href="mailto:shreyam.gupta.mec21@gmail.com" title="Email"><i class="icon solid fa-envelope"></i></a>
+								<a href="https://scholar.google.com/citations?user=ATb4DKcAAAAJ&hl=en" target="_blank" rel="external nofollow noopener" title="Google Scholar"><i class="icon ai ai-google-scholar"></i></a>
+								<a href="https://github.com/shreyamG" target="_blank" rel="external nofollow noopener" title="GitHub"><i class="icon brands fa-github"></i></a>
+								<a href="https://www.linkedin.com/in/shreyam-gupta-199338222" target="_blank" rel="external nofollow noopener" title="LinkedIn"><i class="icon brands fa-linkedin"></i></a>
+								<!-- <a href="assets/pdf/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Curriculum Vitae (PDF)"><i class="icon solid fa-file-pdf"></i></a> -->
+							</div>
+							<div>
+								&nbsp
+							</div>
+							<div>
+								&nbsp
+							</div>
+						</div>
+						<p>
+							I study how intelligent agents build internal models of the world, and how they learn which of their own predictions deserve to be acted on.<br><br>
+							Autonomous Systems Researcher @ <a href="https://www.globalsuzuki.com/corporate/rd/index.html"><b>Maruti Suzuki R&D</b></a><br>
+							B.Tech, Mechanical Engineering @ <a href="https://www.iitbhu.ac.in/"><b>IIT (BHU) Varanasi</b></a>
+						</p>
+							
+                        <p>
+                            I believe embodied AI will not be built on better pixels, but on world models that can tell 
+                            when their own predictions are surprising.<br><br>
+							Mechanical Engineering taught me to think in state, dynamics, and cause, and I've carried that into world models: 
+                            occupancy models for planning at 
+                            <a href="https://www.teamaverera.com/">Team AVERERA</a> , a critic trained on human interventions, 
+                            and a semantic world model on frozen DINOv2 features under Prof. Shishir Kolathaya at <a href="https://www.stochlab.com/">Stochastic Robotics Lab, IISc</a>.<br><br>
+                            That critic could only recognize what humans had already flagged. My question: how can a 
+                            system develop its own feedback signals, such as novelty or surprise, without an external 
+                            verifier? My bet is they should come from learned semantic representations, not raw prediction 
+                            error. An early hint came at NIC <a href="https://www.nic.gov.in/">(National Informatics Centre)</a> : giving each moving region in traffic CCTV its own latent code 
+                            over frozen DINOv2 features made sudden maneuvers stand out with no labeled accident data.
+                        </p>
+                    </div>
+					
+					
+
+                </section>
+
+                <!-- Section: Publications -->
+                <section id="publications">
+                    <header class="major">
+                        <h2>Preprints</h2>
+                    </header>
+
+                    <div class="icra_image preprint-item">
+                        <a href="projects/MAUCell/" class="preprint-media">
+                            <img src="images/mau_thumb.png" alt="MAUCell Demo" />
+                        </a>
+                        <div class="preprint-content">
+                            <h3><a href="projects/MAUCell/">MAUCell: Resolving Spatio-Temporal Entanglement in Video Prediction via Multi-Modal Attention</a></h3>
+                            <p><b>Shreyam Gupta</b>, Pranjal Agrawal, Priyam Gupta<br>
+                                <em><a href="https://arxiv.org/abs/2501.16997"><span class="icon"><i class="ai ai-arxiv"></i></span><span> arXiv preprint arXiv:2501.16997,</span></a> 2025</em><br><br>
+                                <span class="preprint-badges">
+                                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ATb4DKcAAAAJ&citation_for_view=ATb4DKcAAAAJ:d1gkVwhDpl0C"
+                                        aria-label="Google Scholar citations"
+                                        rel="external nofollow noopener"
+                                        target="_blank">
+                                        <img src="https://img.shields.io/badge/scholar-4-4285F4?logo=googlescholar&amp;labelColor=beige"
+                                            alt="Google Scholar citations badge" />
+                                    </a>
+                                </span><br>
+                                A new RNN-based spatio-temporal prediction unit with attention termed Multi-Attention Unit (MAUCell) that combines temporal motion information and spatial appearance information respectively through a temporal attention unit and a spatial attention unit to preserve long-term sequence information at high resolution.                            
+                            </p>
+                            </div>
+                    </div>
+                    
+                    <div class="icra_image preprint-item">
+                        <a href="projects/UAV_UGV_Nav/" class="preprint-media">
+                            <img src="images/uav_ugv.gif" alt="UAV-UGV Demo" />
+                        </a>
+                        <div class="preprint-content">
+                            <h3><a href="projects/MAUCell/">Drone-Assisted UAV-UGV Collaboration for Autonomous Navigation in Snow-Covered Terrain</a></h3>
+                            <p><b>Shreyam Gupta</b>, Pranjal Agrawal, Priyam Gupta, Rakesh Gautam<br>
+                                <em><a href="https://arxiv.org/abs/2608.07797"><span class="icon"><i class="ai ai-arxiv"></i></span><span> arXiv preprint arXiv:2608.07797,</span></a> 2025</em><br><br>
+                                <span class="preprint-badges">
+                                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ATb4DKcAAAAJ&citation_for_view=ATb4DKcAAAAJ:9yKSN-GCB0IC"
+                                        aria-label="Google Scholar citations"
+                                        rel="external nofollow noopener"
+                                        target="_blank">
+                                        <img src="https://img.shields.io/badge/scholar-3-4285F4?logo=googlescholar&amp;labelColor=beige"
+                                            alt="Google Scholar citations badge" />
+                                    </a>
+                                </span><br>
+                                UAV aided mapping and localization for a UGV to autonomously traverse in mountainous terrains.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- Section: Projects -->
+                <section id="projects">
+                    <header class="major">
+                        <h2>Projects</h2>
+                    </header>
+                    
+                    <!-- Special full-width card (flush left/right within #projects, no horizontal scroll) -->
+                    <div class="wide-cards">
+                        <article class="wide-card">
+                            <video class="click-toggle-video"
+                                src="images/forecasting_1.mp4"
+                                poster="images/forecasting_1.png"
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                style="cursor:pointer;">
+                            </video>
+                            <h3>1. <a href="projects/world_model/">Action-Conditioned Occupancy World Model for End-to-End Autonomous Planning</a></h3>
+                            <p>4D Occupancy forecasting and Planning</p>
+                            
+                            <h3>2. <a href="projects/rlhf/">Aligning Autonomous Driving Policies via Pairwise Human Preference Reward Modeling and Proximal Policy Optimization (PPO) in a Frozen Latent World Model</a></h3>
+                            <p>Post-World-Model Policy Alignment via Bradley-Terry Trajectory Preference Learning, Generalized Advantage Estimation (GAE), and KL-Regularized Clipped PPO</p>
+                        </article>
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="wide-cards">
+                        <article class="wide-card">
+                            <div class="wide-media-box">
+                                <video class="click-toggle-video"
+                                    src="images/dino.mp4"
+                                    poster="images/dino.jpg"
+                                    autoplay
+                                    loop
+                                    muted
+                                    playsinline
+                                    preload="auto"
+                                    style="cursor:pointer;">
+                                </video>
+
+                                <div class="wide-card-overlay">
+                                    <div class="wide-card-overlay-inner">
+                                        <h3><a href="projects/world_model/">Self-Supervised Multi-Agent Latent Action Extraction for Unstructured Traffic Video</a></h3>
+                                        <p>DINOv2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    
+                    <div class="posts">
+                        
+                        <article class="posts-wide-card">
+                            <img src="images/INFERENCE_VID_1_edit1.gif" data-static="images/INFERENCE_VID_1_static.png" data-animated="images/INFERENCE_VID_1_edit1.gif" alt="Segmentation Demo" style="cursor:pointer;" />
+                            <br><br>
+                            <h3><a href="https://github.com/Researchfolio/Segmentation_DeepLabV3">Semantic Segmentation of Indian Roads for Autonomous Vehicles</a></h3>
+                            <p>
+                                <!-- <i>Technical Coordinator, Autonomy</i> - <b>Team AVERERA</b><br><br> -->
+                                Developed semantic segmentation model for Indian roads using the DeepLabV3+ architecture with a pre-trained Xception backbone for optimal performance.
+                                Deployed it to an autonomous vehicle <a href="https://www.teamaverera.com/projects">SHIVAAY</a> for Real-world Testing.<br><br>
+                                Inferences on IIT BHU roads: <a href="https://drive.google.com/drive/folders/1eiznJMRvsOaKXnJCr9cnzWMSOYaUQpWx?usp=sharing">Video Testing</a>.
+                            </p>
+	                    </article>
+                        
+                    </div>
+                </section>
+            </div>
+
+            <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=tt&d=gdGN7pbBjfIhLvf5Wrrb7hmm8LSK-4dRrAvQft-RDFs"></script>
+        </div>
+
+        <!-- Sidebar completely removed -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gif-toggle.js"></script>
+
+    <!-- Nav & Scroll Progress Script -->
+    <script>
+        // Hamburger toggle
+        const toggleBtn = document.getElementById('nav-toggle-btn');
+        const navCollapse = document.getElementById('nav-collapse');
+        if (toggleBtn && navCollapse) {
+            toggleBtn.addEventListener('click', () => {
+                navCollapse.classList.toggle('show');
+            });
+        }
+
+        // Live scroll progress bar
+        window.addEventListener('scroll', () => {
+            const bar = document.getElementById('progress');
+            if (!bar) return;
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (height > 0) {
+                bar.value = (winScroll / height) * 100;
+            }
+        });
+    </script>
+	
+	<script>
+		const toggleButton = document.getElementById('light-toggle');
+		// const storedTheme = localStorage.getItem('theme') || 
+		// 	(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		const storedTheme = localStorage.getItem('theme') || 'dark';
+
+		// Set initial theme
+		document.documentElement.setAttribute('data-theme', storedTheme);
+
+		// Toggle on click
+		toggleButton.addEventListener('click', () => {
+			const currentTheme = document.documentElement.getAttribute('data-theme');
+			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', newTheme);
+			localStorage.setItem('theme', newTheme);
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.section-divider {
+  border: 0;
+  border-top: 1px solid #dbdbdb;
+  margin: 0 auto;
+  max-width: 960px;
+  width: calc(100% - 3rem);
+}
+
+.section-divider-spaced {
+  margin-top: 2rem;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+.ratio-16-9,
+.ratio-16-10,
+.ratio-square,
+.sketchfab-embed-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.ratio-square {
+  padding-top: 75%;
+}
+
+.ratio-inner,
+.ratio-16-9 iframe,
+.ratio-16-10 iframe,
+.ratio-square iframe,
+.sketchfab-embed-wrapper iframe {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ascii-diagram {
+  /* Enforces monospace character grid where every character and space has identical width */
+  font-family: "Courier New", Courier, "Cascadia Code", "Fira Code", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.15;            /* Tight line-height prevents vertical gaps in vertical box borders (|) */
+  white-space: pre;             /* Preserves all spaces, tabs, and line breaks exactly as written */
+  overflow-x: auto;             /* Adds horizontal scrolling if the screen is narrower than the box */
+  letter-spacing: 0;            /* Prevents font engine kerning from distorting horizontal line borders (-) */
+  background-color: #0d1117;    /* Optional dark aesthetic matching developer/research portfolios */
+  color: #c9d1d9;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.ascii-diagram code {
+  font-family: inherit;
+  white-space: inherit;
+}
+
+/* Portfolio CSS for Standard Block Layout */
+.math-diagram {
+  font-family: "Fira Code", "Cascadia Code", "Courier New", Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+  white-space: pre-wrap;       /* Preserves line breaks and indentation without breaking MathJax spans */
+  word-break: break-word;
+  background-color: #0b0f19;   /* Deep terminal background */
+  color: #c9d1d9;              /* High-contrast readable body text */
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #21262d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  overflow-x: auto;
+}
+
+/* Syntax highlighting accents for visual hierarchy */
+.math-diagram .highlight {
+  color: #58a6ff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.math-diagram .stage-tag {
+  color: #7ee787;              /* Green accent for pipeline stages */
+  font-weight: 600;
+}
+
+.math-diagram .lane-tag {
+  color: #ffa657;              /* Orange accent for parallel agent lanes */
+  font-weight: 600;
+}
+
+.math-diagram .action-tag {
+  color: #d2a8ff;              /* Purple accent for anomaly action outputs */
+  font-weight: 600;
+}
+
+/* Ensures MathJax inline expressions scale cleanly inside monospace text */
+.math-diagram .MathJax {
+  font-size: 1.05em !important;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* Bulma text overrides
+  .title, .subtitle, .content h1, .content h2, .content h3, .content h4, strong, b {
+    color: #d0d0d0 !important;
+    /* color: #f5f5f5 !important;
+  }
+
+  .content p, .content li, span {
+    color: #d0d0d0 !important;
+  }
+
+  /* Links & buttons
+  a {
+    color: #58a6ff !important;
+  }
+
+  .button.is-dark {
+    background-color: #2d333b !important;
+    color: #f0f6fc !important;
+    border-color: #444c56 !important;
+  }
+
+  .button.is-dark:hover {
+    background-color: #373e47 !important;
+  }
+
+  /* Code blocks & BibTeX pre tags
+  pre, code {
+    background-color: #1e1e1e !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
+  }
+
+  /* Hero & footer sections
+  .hero, .footer {
+    background-color: #121212 !important;
+    color: #8b949e !important;
+  }
+
+  /* Maintain clarity for figures/diagrams with transparent backgrounds
+  img:not(.author-portrait), .publication-video {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 4px;
+  }
+} 
+*/
+
+/* Add this to the bottom of static/css/index.css */
+[data-theme="dark"] body,
+[data-theme="dark"] .hero,
+[data-theme="dark"] .footer {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .title,
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .content h1,
+[data-theme="dark"] .content h2,
+[data-theme="dark"] .content h3,
+[data-theme="dark"] .content h4,
+[data-theme="dark"] strong,
+[data-theme="dark"] b {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .content p,
+[data-theme="dark"] .content li,
+[data-theme="dark"] span,
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] a {
+  color: #58a6ff !important;
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: #1e1e1e !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d !important;
+}
+
+[data-theme="dark"] .button.is-dark {
+  background-color: #2d333b !important;
+  color: #f0f6fc !important;
+  border-color: #444c56 !important;
+}
+
+[data-theme="dark"] img:not(.author-portrait),
+[data-theme="dark"] .publication-video {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* Floating toggle button styling */
+#theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+}
+

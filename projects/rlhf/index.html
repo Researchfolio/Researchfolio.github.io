@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RLHF</title>
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Z8Z3X0W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9Z8Z3X0W8');
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<button id="theme-toggle" class="button is-small is-rounded" onclick="
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  this.textContent = isDark ? '🌙 Dark' : '☀️ Light';
+">🌙 Dark</button>
+
+  
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size:2rem;">Aligning Autonomous Driving Policies via Pairwise Human Preference Reward Modeling and Proximal Policy Optimization (PPO) in a Frozen Latent World Model</h1>
+          <h2 class="title is-1 publication-title" style="font-size:1.5rem;">Post-World-Model Policy Alignment via Bradley-Terry Trajectory Preference Learning, Generalized Advantage Estimation (GAE), and KL-Regularized Clipped PPO</h2>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Report</span>
+                </a>
+              </span> -->
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://gist.github.com/Researchfolio/e266d0209b8b24add49b1b0de3bf3502"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths is-centered">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present an end-to-end autonomous driving alignment framework that couples a pretrained, frozen Bird's-Eye-View (BEV) latent 
+            world model with Reinforcement Learning from Human Feedback (RLHF) and Proximal Policy Optimization (PPO). Operating strictly at the 
+            post-perception latent BEV state boundary $s_t \in \mathbb{R}^{80 \times 80 \times 256}$, the frozen transition operator 
+            $\mathcal{W}_{\text{frozen}}(s_t, a_t)$ acts as a stochastic simulation environment that forecasts future latent scene representations 
+            conditioned on continuous ego-vehicle control actions $a_t \in \mathbb{R}^2$. To internalize complex human safety and comfort
+             trade-offs directly from logged fleet interventions and trajectory comparisons without brittle rule-based heuristics,
+              we train a scalar Fleet Preference Reward Model $r_\psi(s_t, a_t)$ over spatially pooled BEV embeddings using a pairwise 
+              log-sigmoid ranking loss. Using the frozen world model to unroll imagined driving trajectories $\tau = 
+              (s_0, a_0, s_1, a_1, \dots, s_T)$, we train a continuous Gaussian Actor-Critic policy $\pi_\theta(a_t \mid s_t)$ augmented with a 
+              scalar state-value baseline head $V_\theta(s_t)$. Policy gradient variance is reduced via recursive Generalized Advantage 
+              Estimation (GAE), while reward hacking and policy collapse are prevented by penalizing per-step rewards with the 
+              Kullback-Leibler (KL) divergence against a frozen imitation-pretrained reference policy $\pi_{\text{frozen}}$. 
+              Finally, the policy parameters are updated off-policy across mini-batch epochs using the clipped PPO surrogate objective 
+              combined with value function mean-squared error and entropy regularization.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<hr class="section-divider section-divider-spaced">
+
+<section>
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width is-centered">
+        <div class="content has-text-justified">
+          <p>
+            <!-- <strong>End-to-End Vision-to-BEV Latent Planning without Hand-Engineered Geometric Safety Shields</strong> -->
+            <h2>2. End-to-End Vision-to-BEV Latent Planning without Hand-Engineered Geometric Safety Shields</h2>
+              <h3>2.1 Frozen World Model Boundary ($\mathcal{W}_{\text{frozen}}$)</h3>
+              <ul>
+                <li>
+                  <strong>State-Action Environment</strong>: Treats the pretrained BEV world model as a frozen black-box transition environment ($\nabla_{\theta_{\mathcal{W}}} = 0$):
+                  <div>
+                    $$s_{t+1} \sim P(\cdot \mid s_t, a_t) \Longleftrightarrow s_{t+1} = \mathcal{W}_{\text{frozen}}(s_t, a_t)$$
+                  </div>
+                </li>
+                <li>
+                  <strong>Tensor Signatures</strong>:
+                  <ul>
+                    <li><strong>Latent BEV State</strong>: $s_t \in \mathbb{R}^{B \times 80 \times 80 \times 256}$ (encoding a $0.2\text{ m}$ resolution $80 \times 80 \times 11$ 3D voxel grid).</li>
+                    <li><strong>Continuous Ego Action</strong>: $a_t \in \mathbb{R}^{B \times 2}$, representing steering angle and longitudinal acceleration $(\delta_{\text{steer}}, \alpha_{\text{accel}})$ or 2D waypoint offsets $(\Delta x, \Delta y)$.</li>
+                    <li><strong>Imagined Rollout Trajectory</strong>: $\tau = (s_0, a_0, s_1, a_1, \dots, s_T)$ unrolled over horizon $T = 15$ steps.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3>2.2 Fleet Preference Reward Model ($r_\psi$)</h3>
+              <ul>
+                <li>
+                  <strong>Spatial Pooling &amp; Scalar Linear Head</strong>: Collapses the spatial dimensions of $s_t \in \mathbb{R}^{B \times 80 \times 80 \times 256}$ via global average pooling into a compact hidden embedding $h_t \in \mathbb{R}^{B \times 256}$, followed by a single-output linear projection (<code>nn.Linear(256, 1)</code>) to produce a scalar safety/comfort reward:
+                  <div>
+                    $$r_\psi(s_t, a_t) = W_r h_t + b_r \in \mathbb{R}$$
+                  </div>
+                </li>
+                <li>
+                  <strong>Pairwise Log-Sigmoid Ranking Loss</strong>: Given initial scene context $x = s_0$, a human-preferred safe trajectory $y_w$, and a rejected intervention/collision trajectory $y_l$, the reward model is trained to maximize the score margin $r_\psi(x, y_w) - r_\psi(x, y_l)$:
+                  <div>
+                    $$\mathcal{L}_{\text{Reward}}(\psi) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}_{\text{pref}}} \left[ \log \sigma\left( r_\psi(x, y_w) - r_\psi(x, y_l) \right) \right], \qquad \sigma(u) = \frac{1}{1 + e^{-u}}$$
+                  </div>
+                  <ul>
+                    <li>When $r_\psi(x, y_w) &gt; r_\psi(x, y_l)$, $\sigma(\cdot) &gt; 0.5$ and the loss approaches $0$.</li>
+                    <li>When $r_\psi(x, y_w) &lt; r_\psi(x, y_l)$, $\sigma(\cdot) &lt; 0.5$ and $-\log \sigma(\cdot)$ heavily penalizes the misranked pair.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3>2.3 Variance Reduction: Value Baseline ($V_\theta$) &amp; Generalized Advantage Estimation (GAE)</h3>
+              <ul>
+                <li>
+                  <strong>Policy Gradient Foundation</strong>: Maximizing expected trajectory return $J(\pi_\theta) = \mathbb{E}_{\tau \sim \pi_\theta}[R(\tau)]$ via the log-derivative trick yields the basic REINFORCE estimator:
+                  <div>
+                    $$\nabla_\theta J(\pi_\theta) = \mathbb{E}_{\tau \sim \pi_\theta} \left[ \sum_{t=0}^{T} \nabla_\theta \log \pi_\theta(a_t \mid s_t) R(\tau) \right]$$
+                  </div>
+                </li>
+                <li>
+                  <strong>Two-Stage Variance Reduction</strong>:
+                  <ol>
+                    <li><strong>Causality / Rewards-to-Go ($Q^\pi$)</strong>: Actions at step $t$ cannot alter past rewards received prior to $t$. Replacing $R(\tau)$ with future discounted rewards from $t' = t$ to $T$ estimates the state-action value $Q^\pi(s_t, a_t) = \mathbb{E}\left[\sum_{t'=t}^T \gamma^{t'-t} r_{t'}\right]$.</li>
+                    <li><strong>State-Dependent Value Baseline ($V_\theta(s_t)$)</strong>: A second linear head (<code>nn.Linear(256, 1)</code>) attached to the Actor trunk estimates the expected state value $V_\theta(s_t)$. Subtracting $V_\theta(s_t)$ yields the <strong>Advantage Function</strong> $A^\pi(s_t, a_t) = Q^\pi(s_t, a_t) - V^\pi(s_t)$, measuring how much better action $a_t$ is compared to the average action in state $s_t$.</li>
+                  </ol>
+                </li>
+                <li>
+                  <strong>Recursive GAE Computation</strong>: To balance bias (1-step bootstrap) and variance (full Monte Carlo rollout), we compute the Temporal Difference (TD) residual $\delta_t$ and recursively accumulate the Generalized Advantage Estimate $\hat{A}_t$ backward from $t = T-1$ down to $0$ (with $\gamma = 0.99$, $\lambda = 0.95$):
+                  <div>
+                    $$\delta_t = r_t + \gamma V_\theta(s_{t+1}) - V_\theta(s_t)$$
+                    $$\hat{A}_t = \delta_t + \gamma \lambda \hat{A}_{t+1}$$
+                  </div>
+                </li>
+              </ul>
+
+              <h3>2.4 Off-Policy Clipped PPO &amp; KL Reward-Hacking Penalty</h3>
+              <ul>
+                <li>
+                  <strong>Preventing Reward Hacking via Reference KL Penalty</strong>: To prevent the driving policy $\pi_\theta$ from exploiting the learned reward model with unrealistic control commands, each per-step reward is penalized by the KL-divergence between the online policy $\pi_\theta$ and a frozen imitation-pretrained reference policy $\pi_{\text{frozen}}$:
+                  <div>
+                    $$r_t^{\text{total}} = r_\psi(s_t, a_t) - \beta_{\text{KL}} \left( \log \pi_\theta(a_t \mid s_t) - \log \pi_{\text{frozen}}(a_t \mid s_t) \right)$$
+                  </div>
+                </li>
+                <li>
+                  <strong>Off-Policy Importance Sampling</strong>: To avoid costly world-model rollouts at every gradient step, trajectories are sampled once using the offline policy $\pi_{\theta_{\text{old}}}$, cached in memory, and reused across $K$ optimization epochs via the probability ratio:
+                  <div>
+                    $$r_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{\text{old}}}(a_t \mid s_t)} = \exp\left( \log \pi_\theta(a_t \mid s_t) - \log \pi_{\theta_{\text{old}}}(a_t \mid s_t) \right)$$
+                  </div>
+                </li>
+                <li>
+                  <strong>Composite Clipped PPO Objective</strong>: Combines the clipped surrogate policy objective ($L_{\text{POLICY}}$), value function $L_2$ regression loss ($L_{\text{VF}}$), and Gaussian entropy bonus ($L_{\text{ENTROPY}}$):
+                  <div>
+                    $$L_{\text{POLICY}}(\theta) = \min\left( r_t(\theta) \hat{A}_t, \; \text{clip}\left(r_t(\theta), 1 - \epsilon, 1 + \epsilon\right) \hat{A}_t \right)$$
+                    $$L_{\text{VF}}(\theta) = \frac{1}{2} \left\| V_\theta(s_t) - \left(\hat{A}_t + V_{\theta_{\text{old}}}(s_t)\right) \right\|_2^2$$
+                    $$L_{\text{ENTROPY}}(\theta) = -\sum_{a} \pi_\theta(a \mid s_t) \log \pi_\theta(a \mid s_t)$$
+                    $$L_{\text{PPO}}(\theta) = L_{\text{POLICY}}(\theta) + c_1 L_{\text{VF}}(\theta) + c_2 L_{\text{ENTROPY}}(\theta)$$
+                  </div>
+                </li>
+              </ul>
+          </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    <!--/ Abstract. -->
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under the <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

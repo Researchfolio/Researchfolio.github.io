@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self-Supervised Multi-Agent</title>
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Z8Z3X0W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9Z8Z3X0W8');
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Self-Supervised Multi-Agent Latent Action Extraction for Unstructured Traffic Video</h1>
+          <h2 class="title is-1 publication-title" style="font-size:2rem;">Towards Unsupervised Anomaly and Near-Miss Detection</h2>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/pdfs/Report.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Report</span>
+                </a>
+              </span>
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://gist.github.com/shreyamG/e4103fe3b974d2cc21476d1e1ffc2214"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section>
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width is-centered">
+        <div class="content has-text-justified">
+          <p>
+            <strong>The Core Problem (Multi-Agent Entanglement):</strong> Standard latent-action world models compress an entire frame pair ($f^t, f^{t+1}$) into one global action vector $\hat{a}_t$. In a traffic camera view with $K$ moving vehicles, a single vector mixes every vehicle's movement together.
+            <ul>
+              <li>
+                <strong>Unsupervised Perception Router (DINOv2 + PCA):</strong> A frozen DINOv2 backbone extracts patch tokens from raw CCTV frames. Thresholding the top PCA components of these tokens acts as a zero-shot figure/ground separator, masking out the static road and highlighting moving vehicles/pedestrians.
+              </li>
+              <li>
+                <strong>Per-Agent Spatial Routing ($\beta$-VAE Bottleneck):</strong> Instead of feeding the whole frame into the latent action model, each isolated agent crop is routed individually through a continuous $\beta$-VAE bottleneck conditioned on the agent's local frame-to-frame change ($\Delta R_{t \rightarrow t+1}^k$).
+              </li>
+              <li>
+                <strong>Zero-Label Anomaly Signal:</strong> Each agent $k$ gets its own continuous latent action stream $a_t^k \in \mathbb{R}^{d_a}$. Normal driving maps to smooth trajectories in a compact latent region, whereas erratic swerves, hard braking, or near-misses spike as immediate statistical outliers.
+              </li>
+            </ul>
+          </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    <!--/ Abstract. -->
+</section>
+
+<section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths is-centered">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Predictive analysis of public traffic and safety CCTV streams, such as flagging unsafe maneuvers, congestion, or near-miss 
+            events, requires modeling the dynamics between consecutive video frames, yet collecting supervised action- or event-level 
+            annotations across large-scale camera networks is infeasible. While recent self-supervised foundation world models 
+            (such as AdaWorld and DreamDojo) address an analogous missing-label problem in robotics by compressing frame-to-frame 
+            transitions into continuous latent actions via a variational information bottleneck, they rely on a strict structural 
+            assumption: single-actor, egocentric video. Applying a global latent-action bottleneck to statically mounted, 
+            third-person traffic footage entangles the simultaneous motions of multiple independent agents (e.g., vehicles and pedestrians) 
+            into a single undifferentiated code, rendering it unable to isolate individual agent behavior.<br> 
+            To resolve this multi-agent entanglement problem without supervised labels, we introduce a Spatially-Routed 
+            Latent Action Bottleneck for unstructured multi-agent video. First, each frame is encoded using a frozen DINOv2 
+            Vision Transformer (ViT) backbone, and the leading Principal Component Analysis (PCA) components of its 
+            patch-level features are thresholded to separate static background regions (roads, buildings, sky) from 
+            dynamic foreground agents without requiring supervised object detectors or bounding-box annotations. 
+            Second, spatial routing isolates individual dynamic agent regions across consecutive frames using connected-components 
+            analysis and Region-of-Interest (RoI) alignment. Third, the localized frame-to-frame spatio-temporal delta within each 
+            isolated region is routed independently through a continuous \(\beta\)-VAE spatiotemporal Transformer bottleneck. 
+            Because each dynamic region is encoded separately rather than pooled globally, the bottleneck produces a 
+            disentangled, low-dimensional continuous proxy action vector for each agent (e.g., encoding one vehicle's 
+            sudden deceleration separately from another's steady turn). Under normal traffic flow, these per-agent 
+            latent action streams occupy a narrow, learnable region of the latent space, enabling the unsupervised detection of 
+            sudden maneuvers, near-misses, and collisions as statistical outliers or sharp discontinuities without any labeled accident datasets.  
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+  
+
+<hr class="section-divider section-divider-spaced">
+
+  
+<section class="section">
+   <div class="container is-max-desktop">
+    <!-- Methodology. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+    <!--/ Methodology. -->
+<div class="math-diagram">
++------------------------------------------------------------------------------------------------------+
+|                   <span class="highlight">SPATIALLY-ROUTED LATENT ACTION BOTTLENECK (SYSTEM ARCHITECTURE)</span>                |
++------------------------------------------------------------------------------------------------------+
+
+  <span class="stage-tag">[INPUT STREAM]</span>          Unlabeled Traffic CCTV Frames
+  │                       Frame $I_t, I_{t+1}$ $\longrightarrow$ $[B, 3, H, W]$
+  ▼
+  <span class="stage-tag">[STAGE 1: PERCEPTION]</span>   Frozen DINOv2 ViT-g Patch Tokenization
+  │                       $\Phi_{\text{DINOv2}}$ (Frozen Backbone) $\longrightarrow$ Drops $[\text{CLS}]$ Token
+  │                       Output: $\mathcal{Z}_t \in \mathbb{R}^{H_p \times W_p \times D}$ $(D=1536)$
+  ▼
+  <span class="stage-tag">[STAGE 2: FOREGROUND]</span>   Center & Leading $m$-PCA Projection & Threshold
+  │                       $\tilde{Z}_t = Z_t - \mu$,   $P_t = \tilde{Z}_t U_m$,   $M_t = \mathbb{I}(\|\psi\| > \tau)$
+  │                       Output: $M_t \in \{0,1\}^{H_p \times W_p \times 1}$ (0: Static Bg, 1: Dynamic Fg)
+  ▼
+  <span class="stage-tag">[STAGE 3: ROUTING]</span>      Connected Components + RoI Align $(64 \times 64)$
+  │                       $\mathcal{R}_{\text{route}}$ Isolates $K$ Disjoint Dynamic Agent Regions $\{R_t^1, R_t^2, \dots, R_t^K\}$
+  ▼
+  (Slicing into $K$ Distinct, Independent Parallel Agent Lanes — Prevents Multi-Agent Entanglement)
+  │
+  │  <span class="stage-tag">[STAGE 4: PARALLEL PER-AGENT $\beta$-VAE SPATIOTEMPORAL BOTTLENECKS]</span>
+  │
+  ├──► <span class="lane-tag">LANE 1 (Agent $k = 1$)</span>: $\Delta R_{t \rightarrow t+1}^1 \equiv f_1^{t:t+1}$ $[2, 3, 64, 64]$
+  │      └──► $\beta$-VAE Encoder $q_\phi$ (Spatiotemporal Transformer, KL Penalty: $\beta D_{\text{KL}}(q \parallel p)$)
+  │             ├──► $(\mu_t^1, \sigma_t^1) \longrightarrow a_t^1 \in \mathbb{R}^{d_a} \longrightarrow$ <span class="action-tag">[Outlier / Anomaly Det]</span>
+  │             └──► $[\text{Decoder } p_\theta]$ Reconstructs $f_{t+1}^1$
+  │
+  ├──► <span class="lane-tag">LANE 2 (Agent $k = 2$)</span>: $\Delta R_{t \rightarrow t+1}^2 \equiv f_2^{t:t+1}$ $[2, 3, 64, 64]$
+  │      └──► $\beta$-VAE Encoder $q_\phi$ (Spatiotemporal Transformer, KL Penalty: $\beta D_{\text{KL}}(q \parallel p)$)
+  │             ├──► $(\mu_t^2, \sigma_t^2) \longrightarrow a_t^2 \in \mathbb{R}^{d_a} \longrightarrow$ <span class="action-tag">[Outlier / Anomaly Det]</span>
+  │             └──► $[\text{Decoder } p_\theta]$ Reconstructs $f_{t+1}^2$
+  │
+  │    : (Parallel Execution Across All $K$ Dynamic Foreground Regions)
+  │
+  └──► <span class="lane-tag">LANE K (Agent $k = K$)</span>: $\Delta R_{t \rightarrow t+1}^K \equiv f_K^{t:t+1}$ $[2, 3, 64, 64]$
+         └──► $\beta$-VAE Encoder $q_\phi$ (Spatiotemporal Transformer, KL Penalty: $\beta D_{\text{KL}}(q \parallel p)$)
+                ├──► $(\mu_t^K, \sigma_t^K) \longrightarrow a_t^K \in \mathbb{R}^{d_a} \longrightarrow$ <span class="action-tag">[Outlier / Anomaly Det]</span>
+                └──► $[\text{Decoder } p_\theta]$ Reconstructs $f_{t+1}^K$
+</div>
+
+<!-- <hr class="section-divider section-divider-spaced"> -->
+
+    <div class="columns is-centered" style="margin-bottom: 6px;">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h2 class="title is-4" style="margin-bottom: 6px;"></h2>
+        </div>
+      </div>
+    </div>
+    
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"></h2>
+          <div class="content has-text-justified">
+          <p>
+            <strong>Architectural Legend & Mathematical Flow Equations:</strong>
+            <ul>
+              <li>
+                <strong>Input Video Pair:</strong> Consecutive third-person CCTV frames $I_t, I_{t+1} \in \mathbb{R}^{H \times W \times C}$ (denoted $f^{t:t+1}$).
+              </li>
+              <li>
+                <strong>Stage 1 (Frozen DINOv2 Perception):</strong> $\Phi_{\text{DINOv2}}(I_t)$ extracts patch tokens reshaped to spatial feature tensor $\mathcal{Z}_t \in \mathbb{R}^{H_p \times W_p \times D}$ with $D = 1536$ (ViT-g) and patch size $p = 14$.
+              </li>
+              <li>
+                <strong>Stage 2 (Center & PCA Foreground Masking):</strong> Centered patch tokens $\tilde{Z}_t = Z_t - \bar{z}_t$ are projected onto the leading $m$ principal components $P_t = \tilde{Z}_t U_m \in \mathbb{R}^{N_p \times m}$ and thresholded by $\tau$ to yield the binary foreground mask $M_t \in \{0,1\}^{H_p \times W_p \times 1}$ separating static background ($0$) from dynamic foreground regions $R_t$ ($1$).
+              </li>
+              <li>
+                <strong>Stage 3 (Spatial Routing $\mathcal{R}_{\text{route}}$):</strong> Connected-components analysis isolates $K$ disjoint agent bounding boxes $\{R_t^1, R_t^2, \dots, R_t^K\}$ and applies <code>roi_align</code> across $I_t$ and $I_{t+1}$ to extract localized spatio-temporal deltas $\Delta R_{t \rightarrow t+1}^k \equiv f_k^{t:t+1} \in \mathbb{R}^{2 \times 3 \times 64 \times 64}$.
+              </li>
+              <li>
+                <strong>Stage 4 (Parallel $\beta$-VAE Spatiotemporal Bottlenecks):</strong> Each agent region pair $f_k^{t:t+1}$ is encoded independently via $q_\phi(a_t^k \mid f_k^{t:t+1})$ and reconstructed via $p_\theta(f_{t+1}^k \mid a_t^k, f_t^k)$ under KL regularization $\beta D_{\text{KL}}(q_\phi(a_t^k \mid f_k^{t:t+1}) \Vert{} p(a_t^k))$, producing un-entangled continuous latent action streams $\{a_t^1, a_t^2, \dots, a_t^K\} \in \mathbb{R}^{d_a}$.
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+<!-- <hr class="section-divider"> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under the <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
